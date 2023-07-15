@@ -1,0 +1,28 @@
+.recipes-container{
+    margin:4rem 6rem;
+}
+.recipesection-heading{
+    font-size: 32px;
+    font-weight: 600;
+    margin: 3rem 0rem 3rem 0rem;
+    text-transform:capitalize;
+}
+.recipesection-heading::after{
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 0.3rem;
+    background-color: #FF3F3F;
+    margin-top: 0.8rem;
+}
+.recipes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 900px){
+    .recipes-container{
+        margin: 4rem 2rem;
+    }
+}

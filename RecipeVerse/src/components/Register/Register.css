@@ -1,0 +1,146 @@
+.main-register{
+    min-height: 100vh;
+    min-width: 100vw;
+    /* overflow-x: hidden; */
+
+}
+
+.rightside-register{
+    height: 50rem;
+    width: 35rem;
+    border-radius: 10px;
+    margin : 1rem auto;
+    background-color: #FBF4E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+
+    
+}
+.container-register{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+.main-register .container-register>h1{
+    margin: 0.5rem;
+    font-weight: 400;
+    font-size: 32px;
+    
+}
+
+.container-register>Form{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content:space-between!important;
+    column-gap: 3rem !important;
+
+}
+
+.main-register .container-register>h2{
+    margin-bottom: 3rem;
+    font-weight: bolder;
+    font-size: 55px;
+    
+}
+
+.main-register .container-register{
+    height: 35rem;
+    width: 100%;
+}
+
+.main-register .container-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+.profilepic>input{
+    width: 20rem !important;
+}
+.main-register .input-group{
+    margin: 0rem 2rem;
+}
+
+
+.main-register .input-group>input{
+    display: block;
+    width: 12rem;
+    border: none;
+    height: 2rem;
+    color: grey;
+    margin-bottom:  1.5rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    align-items: center;
+
+}
+
+
+.main-register .input-group>input :hover{
+    border: 2px solid #000000;
+
+}
+
+#sbtn{
+    display: block;
+    width: 200px !important;
+    border: none;
+    height: 2rem;
+    margin: 0rem 0rem 0rem 12rem;
+    background: #FF3F3F;
+    color: #ffffff;
+    margin-bottom:  1.5rem;
+    padding: 0.2rem 1rem;
+    align-items: center;
+    border-radius: 20px;
+    flex-basis: 50%;
+    align-content: center;
+    align-self:center;
+    background-color: #FF3F3F;
+    font-weight: bold;
+    
+}
+
+#sbtn:hover{
+    background-color: #ff0000d4;
+
+    box-shadow: 0 2px 4px rgba(211, 41, 41, 0.71);
+
+
+    transition: all 0.3s ease;
+    
+}
+
+/*   
+  @media screen and (max-width: 950px ){
+    .main-register .leftside-register{
+        display: none;
+     }
+
+
+    .main-register .rightside-register{
+        flex:1;
+    }
+
+    .main-register .rightside-register .body-right .container-register{
+        height: 90%;
+        width: 60%;
+
+    }
+    .main-register .rightside-register .body-right .container-register .input-group{
+        width:70%;
+    }
+    .main-register .rightside-register .body-right .container-register .input-group h5{
+        
+        left: 3.5rem;
+        top: 0.5rem;
+        
+    
+    }
+    .main-register .rightside-register .body-right .container-register .input-group input{
+        margin: 1rem 2rem;
+    }
+  } */

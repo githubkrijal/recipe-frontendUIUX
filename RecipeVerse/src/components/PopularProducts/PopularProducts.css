@@ -1,0 +1,156 @@
+/* .popular{
+    margin:4rem 6rem;
+}
+
+.popular h1{
+    font-size:30px;
+
+}
+.popular-products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+   
+}
+.popular-products-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+   
+}
+.pro-text{
+    width:50%;
+    text-align: start;
+    font-size: 1.1rem;
+
+}
+.pro-text h2{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+.pro-img{
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+}
+.pro-img img{
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.75);
+}
+.pro-img img:nth-child(2){
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+@media screen and (max-width: 950px){
+    .popular{
+        margin: 4rem 2rem;
+    }
+    .popular-products{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2.5rem;
+        
+    }
+    .popular-products-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2.5rem;
+    }
+    .pro-text{
+        width: 100%;
+        
+    }
+    .pro-img{
+        width: 100%;
+        margin: 2rem 0rem ;
+       
+    }
+    .pro-img img{
+        height: 100%;
+    }
+}
+  */
+
+
+
+     /* New ------------------------------------*/
+.popular{
+    margin: 4rem 6rem;
+}
+
+.popular h1{
+    font-size:30px;
+
+}
+
+.popular-products{
+    display: inline-block ;
+    overflow: hidden;
+    
+    margin-top: 1.5rem;
+}
+
+
+.pro-img{
+    position: relative;
+    margin: 1rem;
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    justify-content: space-between;
+    z-index: -99;
+    border-radius: 50%;
+
+}
+.pro-img img{
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 50%;
+
+    /* box-shadow: -1px 1px 10px 0px rgb(0, 0, 0); */
+
+}
+
+.pro-text{
+    text-align: center;
+    font-size: 1.1rem;
+
+}
+
+
+@media screen and (max-width: 950px){
+    .popular{
+        margin: 3rem 2rem;
+    }
+    .popular-products{
+        display: inline-block;
+        margin-top: 2.5rem;
+      
+        
+    }
+  
+    .pro-text{
+        width: 20%;
+        
+    }
+    .pro-img{
+        width: 50%;
+        margin: 0rem;
+
+       
+    }
+    .pro-img img{
+        height: 50%;
+    }
+}

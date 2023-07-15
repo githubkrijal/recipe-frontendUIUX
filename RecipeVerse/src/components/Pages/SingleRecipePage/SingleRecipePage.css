@@ -1,0 +1,195 @@
+.single-recipe-main-content{
+    margin: 8rem 0;
+
+
+}
+.layout{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.recipe-link>iframe{
+    width: 100%; 
+    height:600px;
+
+
+}
+.single-recipe-page{
+    display: flex;
+    flex-direction: row;
+}
+.single-recipe-page .left{
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,0.05);
+    flex-shrink: 0;   
+}
+.single-recipe-page .left img{
+    max-width: 100%;
+    display: block;
+    
+}
+.single-recipe-page .right{
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+}
+
+.recipe-name{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.recipePageTitle{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.recipe-ingredients{
+    font-size: 18px;
+    margin: 0.5rem;
+
+}
+
+.recipe-instructions{
+    font-size: 18px;
+    margin: 0.5rem 0.5rem 2rem;
+
+}
+
+.recipe-price{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    
+}
+.recipe-description{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.cart-buttons{
+    display: flex;
+
+}
+.quantity-buttons{
+    display: flex;
+    width:fit-content;
+    border: 2px solid rgba(0,0,0,0.2);
+    margin-right: 1rem;
+    height: 5rem;
+}
+.quantity-buttons span{
+    font-size: 2rem;
+    width:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #6b6b6b;
+}
+.quantity-buttons span:nth-child(1){
+    border-right: 2px solid rgba(0,0,0,0.2);
+}
+.quantity-buttons span:nth-child(2){
+    width:5rem
+}
+.quantity-buttons span:nth-child(3){
+    border-left: 2px solid rgba(0,0,0,0.2);
+}
+.add-to-cart-button{
+    outline: 0;
+    border: 0;
+    height:5rem;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    background-color: #f9660bee;
+    border-bottom: 3px solid #f9660bee;
+    flex-grow: unset;
+
+}
+.divider{
+    margin: 20px 0 ;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+
+}
+.info-item .text-bold{
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+
+}
+
+
+
+
+@media screen and (max-width: 900px){
+    .single-recipe-main-content{
+        margin: 4rem 0;
+    }
+    .layout{
+        max-width: calc(100% -1rem);
+        margin: 0 auto;
+    }
+    .single-recipe-page{
+        display: flex;
+        flex-direction: column;
+    }
+    .single-recipe-page .left{
+        width: 100%;
+    }
+    .single-recipe-page .right{
+        padding-top: 2rem;
+    }
+    .recipe-name{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .recipe-price{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .recipe-description{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    
+    .quantity-buttons{
+        display: flex;
+        width:fit-content;
+        border: 2px solid rgba(0,0,0,0.2);
+        margin-right: 1rem;
+        height: 3rem;
+    }
+    .quantity-buttons span{
+        font-size: 1rem;
+        width:2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+   
+    .quantity-buttons span:nth-child(2){
+        width:3rem
+    }
+    .add-to-cart-button{
+        height:3rem;
+        font-size: 1rem;
+        flex-grow: 1;
+    }
+
+
+}
+    

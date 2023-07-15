@@ -1,0 +1,258 @@
+.NavbarItems{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.094);
+    height: 80px;
+    width: 100%;
+
+    position: fixed;
+    top:0px;
+    left:50%;
+    transform: translate(-50%,0);
+
+}
+
+.navbar-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    color: #f9660bee;
+    cursor: pointer;
+}
+
+.nav-menu{
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  margin-right: 5rem;
+
+}
+
+.nav-menu .grid-item:nth-child(3) {
+  margin-right: 5rem;
+}
+
+.nav-links{
+  color: #0e6e08;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav-links i {
+  margin-right: 0.5rem;
+
+}
+.nav-links:hover{
+  /* background-color: #f9660bee; */
+  color: #8f0505;
+  transition: all 0.3s ease;
+  font-weight: 900;
+}
+
+button{
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(0, 102, 255);
+}
+button:hover{
+  background-color: #f9660bee;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58,57,57);
+}
+
+.menu-icons{
+  display: none;
+}
+
+.profile-container {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  height: 400px;
+}
+
+.profile-container h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.profile-container p{
+  margin: 0;
+  font-size: 0.8rem;
+}
+.profile-container input[type="password"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.profile-container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px;
+}
+
+/* dropdown logout --------------*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    width:80%
+  }
+  
+  .profile-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .profile-container p {
+    font-size: 0.9rem;
+  }
+  
+  .profile-container input[type="password"] {
+    max-width: 300px;
+    padding: 5px;
+  }
+  
+  .profile-container button {
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-container {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 900px){
+  .NavbarItems{
+    z-index: 99;
+  }
+  
+  .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -105%;
+    opacity: 0;
+    border-radius: 13px;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+    
+    
+  }
+  .nav-menu.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-links{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+  .nav-links:hover{
+    background-color: #fe9955e1;
+    color: #fff;
+    transition: none;
+  }
+  
+  .nav-links-mobile{
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin:auto;
+    border-radius: 15px;
+    width: 80%;
+    background-color: #f88a2f;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  button{
+    width: 80%;
+    align-self: center;
+  }
+  .menu-icons{
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #f9660bee;
+  }
+  .menu-icons i{
+    font-size: 1.2rem;
+    color:#222;
+  }
+  
+
+}
