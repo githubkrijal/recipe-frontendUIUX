@@ -1,71 +1,68 @@
-import React from 'react'
-import NavBar from '../Navbar/Navbar'
-import Hero from '../Hero/Hero'
-import heroimg from '../../images/car2.jpg'
-import Footer from '../Footer/Footer'
-
-
+import React, { useState, useEffect } from 'react';
+import NavBar from '../Navbar/Navbar';
+import Hero from '../Hero/Hero';
+import heroimg from '../../images/heropic2.jpeg';
+import Footer from '../Footer/Footer';
 import RecipesContainer from "../Recipes/RecipesContainer";
-import { useEffect } from "react";
 import RecipeService from "../../services/recipeService";
-// function Recipes(){
-//     return(
-//         <div>
-//             <NavBar/>
-//             {/* <Hero cName="hero-mid"
-//             heroimg={heroimg}
-//             title="About us"
-//             description="From 2020, Artsy has been providing the best quality of art to the people. We have a wide range of art products. We have a team of experts who are always ready to help you."
-//             btnClass='hide'
-//             /> */}
-            
-//             <Hero cName="hero"
-//             heroimg={heroimg}
-//             title="Recipe"
-//             description="Get your aesthetic enjoyment here page 2"
-//             btnClass='hide'
-           
-//             />   
+import { useLocation } from 'react-router-dom';
+import './Recipes.css';
 
-//             <Recipe/>
-//             <Footer/>
-           
-//         </div>
-//     )
+function Recipes({recipes,setRecipes}) {
+    //remove {recipes,setRecipes} to run search
 
-// }
+  // const [recipes, setRecipes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
 
-// export default Recipes
+  useEffect(() => {
+    RecipeService.getAll()
+      .then(response => {
+        setRecipes(response.data.data);
+        console.log(recipes);
+      })
+      .catch(err => console.log(err));
+  }, []);
 
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchQuery = searchParams.get("search");
+    setSearchTerm(searchQuery || "");
+  }, [location.search]);
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
-function Recipes({recipes,setRecipes}){
-    useEffect(()=>{
-        RecipeService.getAll()
-        .then(response => {
-            setRecipes(response.data.data)
-            console.log(recipes)
-        }).catch(err => console.log(err))
-}, [])
+  const filteredRecipes = recipes.filter((recipe) => {
+    const recipeName = recipe.recipename.toLowerCase();
+    const searchTerms = searchTerm.toLowerCase();
+    return recipeName.includes(searchTerms);
+  });
 
+  return (
+    <div>
+      <NavBar />
+      <Hero
+        cName="hero"
+        heroimg={heroimg}
+        title="Our Recipes"
+        description="Explore the food world, cook what you desire"
+        btnClass='hide'
+      />
 
-    return(
-        <div>
-            <NavBar/>
-            <Hero cName="hero"
-            heroimg={heroimg}
-            title="Our Recipes"
-            description="Over 100 products to choose from"
-            btnClass='hide'
-            />
-            <RecipesContainer recipes={recipes}/>
-            <Footer/>
-        </div>
-
-
-    )
+      <input className='searchfill'
+        type="text"
+        placeholder="Search recipes"
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+     
+      <RecipesContainer recipes={filteredRecipes} />
+     
+      <Footer />
+    </div>
+  );
 }
 
-export default Recipes
-
- 
+export default Recipes;

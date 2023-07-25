@@ -12,8 +12,7 @@ function SeeProducts() {
   useEffect(() => {
     ProductService.getAll().then((res) => {
       setProducts(res.data.data);
-    }
-    );
+    });
   }, []);
 
   const deleteProduct = async (productId) => {
@@ -21,7 +20,7 @@ function SeeProducts() {
     await ProductService.deleteProduct(productId);
     setProducts(products.filter(product => product._id !== productId));
   };
-  
+
   const editProduct = (product) => {
     navigate('/editProduct', { state: { product } });
   };
@@ -39,32 +38,29 @@ function SeeProducts() {
             <th>Action</th>
           </tr>
         </thead>
-        
+        <tbody>
           {products.map((product) => (
-            <tbody>
             <tr key={product.id}>
               <td>
-                <img src={"http://localhost:3000"+product.image} alt={product.name} />
+                <img
+                  src={"http://localhost:3000" + product.image}
+                  alt={product.name}
+                  style={{ width: "100px", height: "100px" }}
+                />
               </td>
               <td>{product.name}</td>
               <td>{product.description}</td>
               <td>{product.price}</td>
               <td>
-                <i className="fas fa-edit" onClick={()=> editProduct(product)}></i>
-                <i
-                  className="fas fa-trash-alt"
-                  onClick={() => deleteProduct(product._id)}
-                ></i>
+                <i className="fas fa-edit" onClick={() => editProduct(product)}></i>
+                <i className="fas fa-trash-alt" onClick={() => deleteProduct(product._id)}></i>
               </td>
             </tr>
-            </tbody>
           ))}
-          
-        
+        </tbody>
       </table>
     </div>
   );
-};
-
+}
 
 export default SeeProducts;

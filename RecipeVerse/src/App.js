@@ -19,17 +19,12 @@ import EditProduct from './components/AdminPanel/Contents/EditProduct';
 function App() { 
   const [products,setProducts]=useState([])
 
-
-
   const match=useMatch('/products/:id')
   const product=match
                 ?products.find(p=>p._id===match.params.id)
                 :null
 
-
   const [recipes,setRecipes]=useState([])
-
-
 
   const matchr=useMatch('/recipes/:id')
   const recipe=matchr
@@ -46,7 +41,7 @@ function App() {
           <Route path="/login" element={<Login/>} exact/>
           <Route path="/register" element={<Register/>} exact/>
           <Route path="/products/:id" element={<SingleProductPage product={product}/>} exact/> 
-          <Route path="/recipes/:id" element={<SingleRecipePage recipe={recipe}/>} exact/> 
+          <Route path="/recipes/:id" element={<SingleRecipePage products={products} recipe={recipe}/>} exact/> 
           <Route path="*" element={<h1>404 Not Found</h1>}/>
           <Route path="/admin" element={<Homeadmin/>}/> 
           <Route path="/editProduct" element={<EditProduct/>} exact/>

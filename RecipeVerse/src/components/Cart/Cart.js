@@ -87,7 +87,7 @@ const Cart = ({setshowCart}) => {
                         <CartItem cartItems={cartItems} setCartItems={setCartItems} />
                         <div className="cart-footer">
                             <div className="subtotal">
-                                <span className="text">Subtotal:</span>
+                                <span className="text">Total:</span>
                                 <span className="text total">
                                     {cartSubTotal}
                                 </span>

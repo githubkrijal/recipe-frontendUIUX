@@ -18,12 +18,12 @@
 .hero-mid p{
     padding: 4rem !important;
 }
-img{
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
-}
+    filter: brightness(80%) saturate(110%); 
+  }
 .hero-text{
     position: absolute;
     top: 50%;

@@ -14,7 +14,7 @@ import glass2 from "../../images/glass2.png";
 const Popular=({products})=>{
     return(
         <div className="popular">
-            <h1>Popular Categories</h1>
+           <h1 className="red-heading">Popular Recipes</h1>
             <CategoriesData
             className="popular-products"
             heading="Pizza"
@@ -52,12 +52,6 @@ const Popular=({products})=>{
             img1={recipe6}/>
 
             
-            {/* <CategoriesData
-            className="popular-products-reverse"
-            heading="Glass Painting"
-            text="Glass painting is the art of painting on glass surfaces such as windows, doors, vases, and other glass objects. It involves using special paints that are specifically designed for glass surfaces, and techniques such as brush painting, stippling, and sponging. Glass painting can create stunning effects, with the light shining through the glass, illuminating the colors and designs. It is often used for decorative purposes, but can also be used to create functional objects such as stained glass windows."
-            img1={glass1}
-            img2={glass2}/> */}
 
 
         </div>

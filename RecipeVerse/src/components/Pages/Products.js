@@ -1,19 +1,42 @@
-import React  from "react";
+import React, { useState, useEffect } from 'react';
 import NavBar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
-import heroimg from "../../images/car4.jpg";
+import heroimg from "../../images/heropic2.jpeg";
 import Footer from "../Footer/Footer";
 import ProductsContainer from "../Products/ProductsContainer";
-import { useEffect } from "react";
 import ProductService from "../../services/productService";
+import { useLocation } from 'react-router-dom';
+import './Recipes.css';
 
-function Products({products,setProducts}){
+
+function Products({products, setProducts}){
+  //remove {products, setProducts} to run search
+    // const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
+
     useEffect(()=>{
         ProductService.getAll()
         .then(response => {
-            setProducts(response.data.data)
-        }).catch(err => console.log(err))
-}, [])
+            setProducts(response.data.data);
+        }).catch(err => console.log(err));
+}, []);
+
+useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchQuery = searchParams.get("search");
+    setSearchTerm(searchQuery || "");
+  }, [location.search]);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredProducts = products.filter((product) => {
+    const productName = product.name.toLowerCase();
+    const searchTerms = searchTerm.toLowerCase();
+    return productName.includes(searchTerms);
+  });
 
 
     return(
@@ -21,11 +44,19 @@ function Products({products,setProducts}){
             <NavBar/>
             <Hero cName="hero"
             heroimg={heroimg}
-            title="Our Products"
-            description="Over 100 products to choose from"
+            title="Shop Groceries"
+            description="No more running to grocey store, order from here"
             btnClass='hide'
             />
-            <ProductsContainer products={products}/>
+
+<input className='searchfill'
+                type="text"
+                placeholder="Search products"
+                value={searchTerm}
+                onChange={handleSearch}
+            />
+            <ProductsContainer products={filteredProducts}/>
+            
             <Footer/>
         </div>
 

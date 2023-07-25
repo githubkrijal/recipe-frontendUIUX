@@ -102,16 +102,7 @@ function Register(){
 
                         
                         <Form>
-                        <div className='input-group'>
-                                <Label className="profilepic">Profile Picture</Label>
-                                <input
-                                    id="image"
-                                    name="image"
-                                    accept="image/*"
-                                    type="file"
-                                    onChange={handleImageChange}
-                                />
-                        </div>
+                   
                         <div className='input-group'>
                                 <Label for="firstname">First Name</Label>
                                 <input
@@ -190,15 +181,24 @@ function Register(){
                             </div>
                             
 
-                            <div className='input-group-button'>
-                                <Input type="submit" value="Register" id='sbtn'onClick={handleRegister} />
-                            </div>
+                            <div className="input-group-button">
+  <Input
+    type="submit"
+    value="Register"
+    id="sbtn"
+    onClick={handleRegister}
+    style={{ margin: "2rem 10rem 4rem 3.1rem" }} // Add the desired margin and set auto for horizontal centering
+  />
+</div>
+
                             </Form>
      
                             
                             <div className="top-right">
                             <Label for="haveanaccount">Already have an account ?
-                            <Link id='link-signin' to='/login'>  Login</Link>
+                            <Link id="link-signin" to="/login" style={{ color: "red", fontWeight: "bold", marginRight: '14rem' }}>
+  Login
+</Link>
                                 </Label>
                             </div>
                         

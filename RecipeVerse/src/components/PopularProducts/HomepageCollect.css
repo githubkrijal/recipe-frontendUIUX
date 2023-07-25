@@ -4,6 +4,7 @@
 
 .infosection h1{
     font-size: 3rem;
+    color: #FF3F3F;
 
 }
 .infosection-products{
@@ -13,6 +14,11 @@
     margin-top: 4.5rem;
    
 }
+.red-heading {
+    color: #FF3F3F;
+  }
+  
+
 .infosection-products-reverse{
     display: flex;
     flex-direction: row-reverse;
@@ -29,7 +35,8 @@
 }
 .info-text h2{
     font-size: 2.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
+    margin-top: 1rem;
 }
 .info-img{
     position: relative;

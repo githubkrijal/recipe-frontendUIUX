@@ -17,7 +17,6 @@ function EditProduct() {
     }
   }, [location.state.product]);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
@@ -34,25 +33,29 @@ function EditProduct() {
   return (
     <>
       <SideBar/>
-      
+
       <div className="edit-product-container">
-        <img src={"http://localhost:3000"+product.image} alt={product.name} />
+        <div className="image-container">
+          <img src={"http://localhost:3000"+product.image} alt={product.name} />
+        </div>
 
         <form onSubmit={handleSubmit}>
-        <h2>Edit Product</h2>
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" value={product.name} onChange={handleChange} />
+          <h2>Edit Product</h2>
+          <div className="form-fields">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name" value={product.name} onChange={handleChange} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="description">Description</label>
+              <input type="text" name="description" id="description" value={product.description} onChange={handleChange} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="price">Price</label>
+              <input type="text" name="price" id="price" value={product.price} onChange={handleChange} />
+            </div>
+            <button type="submit">Update</button>
           </div>
-          <div className="form-group">
-            <label htmlFor="description">Description</label>
-            <input type="text" name="description" id="description" value={product.description} onChange={handleChange} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="price">Price</label>
-            <input type="text" name="price" id="price" value={product.price} onChange={handleChange} />
-          </div>
-          <button type="submit">Update</button>
         </form>
       </div>
     </>

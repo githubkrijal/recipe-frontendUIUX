@@ -11,10 +11,11 @@
   flex-basis: 30%;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: #FF3F3F;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -56,7 +57,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 label {
@@ -78,14 +79,15 @@ select {
 button[type="submit"] {
   flex-basis: 100%;
   padding: 10px;
-  background-color: #f6b29b;
+  background-color: #FF3F3F;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 2rem;
 }
 
 button[type="submit"]:hover {
-  background-color: #8e5f3e;
+  background-color: #FF3F3F;
 }

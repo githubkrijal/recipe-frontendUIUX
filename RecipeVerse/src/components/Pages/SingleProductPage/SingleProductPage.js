@@ -52,9 +52,7 @@ const SingleProductPage=({product})=>{
                     </div>
                     <div className="right">
                         <span className='product-name'>{product.name}</span>
-                       
                         <span className='product-description'>{product.description}</span>
-
                         <span className='product-price'>Rs. {product.price}</span>
 
                         <div className="cart-buttons">
@@ -65,26 +63,19 @@ const SingleProductPage=({product})=>{
                             </div>
                             <button className='add-to-cart-button'
                                 onClick={() => handleAddToCart(product, quantity, product.price * quantity)
-                                    
                                 }>
                                 <FaCartPlus size={20}/>
                                     Add to Cart
                             </button>
-
                         </div>
                         <span className='divider'></span>
                         <div className="info-item">
                             <span className='text-bold'>Category:
                                 <span> {product.category.categoryName}</span>
                             </span>
-                            
-
                         </div>
-
                     </div>
-
-                </div>
-                
+                </div>    
             </div>
         </div>
         </>

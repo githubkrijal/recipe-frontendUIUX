@@ -134,3 +134,13 @@
                             transform: translateX(0);
                         }
                     }
+
+                    .cart-panel .button .checkout-cta {
+                        background-color: green;
+                        color: #ffffff;
+                      }
+                      
+                      .cart-panel .button .checkout-cta:hover {
+                        background-color: green;
+                      }
+                      

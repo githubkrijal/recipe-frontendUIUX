@@ -1,5 +1,5 @@
 .single-recipe-main-content{
-    margin: 8rem 0;
+    margin: 8rem 0rem 0rem 0rem;
 
 
 }
@@ -53,6 +53,15 @@
     margin: 0.5rem;
 
 }
+
+.toggle-instructions {
+    color: #FF3F3F;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 22px;
+  }
 
 .recipe-instructions{
     font-size: 18px;
@@ -129,6 +138,11 @@
     font-weight: 500;
     display: block;
 
+}
+.recipe-ingredients,
+.recipe-instructions {
+  white-space: pre-line;
+  word-break: break-word;
 }
 
 

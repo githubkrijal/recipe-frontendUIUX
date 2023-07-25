@@ -30,7 +30,7 @@ const SideBar = ({ setActiveComponent }) => {
           <div>
             <Link to='/admin' className='nav-logo'>
               <i className={`fas fa-home-alt nav-logo-icon`}></i>
-              <span className='nav-logo-name'>ARTSY</span>
+              <span className='nav-logo-name'>RecipeVerse</span>
             </Link>
 
             <div className='nav-list'>

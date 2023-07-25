@@ -1,0 +1,94 @@
+.main-billing {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  
+  .rightside-billing {
+    height: 42rem;
+    width: 35rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    background-color: #fbf4e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.5rem;
+  }
+  
+  .container-billing {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  
+  .main-billing .container-billing > h1 {
+    margin: 0.5rem;
+    font-weight: 400;
+    font-size: 32px;
+  }
+  
+  .container-billing > Form {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    column-gap: 3rem !important;
+  }
+  
+  .main-billing .container-billing > h2 {
+    margin-bottom: 3rem;
+    font-weight: bolder;
+    font-size: 55px;
+  }
+  
+  .main-billing .container-billing {
+    height: 35rem;
+    width: 100%;
+  }
+  
+  .main-billing .container-billing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .main-billing .input-group {
+    margin: 0rem 2rem;
+  }
+  
+  .main-billing .input-group > input {
+    display: block;
+    width: 12rem;
+    border: none;
+    height: 2rem;
+    color: grey;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  #sbtn {
+    display: block;
+    width: 200px !important;
+    border: none;
+    height: 2rem;
+    margin: 0rem 0rem 0rem 12rem;
+    background: #ff3f3f;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 1rem;
+    align-items: center;
+    border-radius: 20px;
+    flex-basis: 50%;
+    align-content: center;
+    align-self: center;
+    background-color: #ff3f3f;
+    font-weight: bold;
+  }
+  
+  #sbtn:hover {
+    background-color: #ff0000d4;
+    box-shadow: 0 2px 4px rgba(211, 41, 41, 0.71);
+    transition: all 0.3s ease;
+  }
+  
